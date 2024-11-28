@@ -1,0 +1,5 @@
+Training session one, no skip connections: 20 epochs Mean Intersection over Union (mIoU): 0.0350
+
+Training session two, skip connection:70 epochs Mean Intersection over Union: 0.13000
+
+advanced model had lower loss but scored higher miou scores.
