@@ -9,7 +9,7 @@ from torchvision.transforms import Compose, ToTensor, Normalize, Resize
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 
-from Adv2Model import AdvancedSegmentationCNN
+from FinalModel import AdvancedSegmentationCNN
 
 # Set device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

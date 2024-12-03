@@ -22,7 +22,7 @@ from KnowledgeDistillation.BetterTrain import train_knowledge_distillation, prep
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load your custom model
-from Adv2Model import AdvancedSegmentationCNN  # Adjust this based on your file structure
+from FinalModel import AdvancedSegmentationCNN  # Adjust this based on your file structure
 num_classes = 21  # VOCSegmentation has 21 classes including background
 model = AdvancedSegmentationCNN(num_classes).to(device)
 #

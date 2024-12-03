@@ -183,7 +183,7 @@ def val_preprocess(image, target):
 
 # Main training script
 if __name__ == "__main__":
-    from Adv2Model import AdvancedSegmentationCNN
+    from FinalModel import AdvancedSegmentationCNN
     import os
 
     os.environ["CUDA_LAUNCH_BLOCKING"] = "1"

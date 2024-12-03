@@ -12,7 +12,7 @@ from torchvision.models.segmentation import fcn_resnet50
 from torchvision.transforms import Compose, ToTensor, Normalize, Resize
 from tqdm import tqdm
 
-from Adv2Model import AdvancedSegmentationCNN
+from FinalModel import AdvancedSegmentationCNN
 
 # Define device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

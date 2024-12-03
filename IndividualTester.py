@@ -134,7 +134,7 @@ def calculate_all_mious(csv_path="miou_all_samples.csv"):
     avg_miou = np.nanmean(all_mious)
     print(f"Overall Average mIoU: {avg_miou:.4f}")
 
-from Adv2Model import AdvancedSegmentationCNN
+from FinalModel import AdvancedSegmentationCNN
 
 # Load your model
 num_classes = 21  # VOCSegmentation has 21 classes

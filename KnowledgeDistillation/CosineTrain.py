@@ -7,7 +7,7 @@ from torchvision.datasets import VOCSegmentation
 from torchvision.transforms import Compose, ToTensor, Normalize, Resize
 from tqdm import tqdm
 import matplotlib.pyplot as plt
-from Adv2Model import AdvancedSegmentationCNN
+from FinalModel import AdvancedSegmentationCNN
 
 class FeatureExtractor:
     def __init__(self, model, layer_name):
