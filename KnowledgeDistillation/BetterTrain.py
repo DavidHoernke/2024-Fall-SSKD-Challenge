@@ -89,6 +89,7 @@ def train_knowledge_distillation(teacher, student, train_loader, val_loader, epo
             torch.save(student.state_dict(), save_path)
             print(f"Validation loss improved to {avg_val_loss:.4f}. Model weights saved!")
 
+
         torch.save(student.state_dict(), "LATEST"+save_path)
         # Visualize one random prediction
         visualize_prediction(student, val_loader, device)
