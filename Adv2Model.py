@@ -70,11 +70,17 @@ class AdvancedSegmentationCNN(nn.Module):
         # Final output layer
         self.final_conv = nn.Conv2d(64, num_classes, kernel_size=1)
 
+        # Store intermediate features for KD
+        self.features = None
+
     def forward(self, x):
         # Encoder
         x1 = self.enc_conv1(x)  # Output: (batch, 64, H, W)
         x2 = self.enc_conv2(self.pool(x1))  # Output: (batch, 128, H/2, W/2)
         x3 = self.enc_conv3(self.pool(x2))  # Output: (batch, 256, H/4, W/4)
+
+        # Save intermediate feature maps for KD
+        self.features = x3
 
         # Bottleneck
         x4 = self.bottleneck(self.pool(x3))  # Output: (batch, 512, H/8, W/8)

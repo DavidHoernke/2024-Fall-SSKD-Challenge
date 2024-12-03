@@ -139,14 +139,14 @@ from Adv2Model import AdvancedSegmentationCNN
 # Load your model
 num_classes = 21  # VOCSegmentation has 21 classes
 model = AdvancedSegmentationCNN(num_classes)
-model.load_state_dict(torch.load("./KnowledgeDistillation/actuallySaveMeLATESTT7SOFT0.7best_student4_model.pth"))
+model.load_state_dict(torch.load("./KnowledgeDistillation/student_model.pth"))
 # model.load_state_dict(torch.load("HeavyAugment_segmentation_model_best_augmented1.pth"))
 model = model.to(device)
 model.eval()
 
 
 # Example Usage
-indices_to_visualize = [7,77,777,707,2]  # Indices to visualize
+indices_to_visualize = [0,77,777,707,2]  # Indices to visualize
 visualize_and_analyze(indices_to_visualize, visualize=True)
 
 # Calculate and save all mIoUs to CSV
